@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e3e4e8;
+}
+
+.wrap::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: -150px;
+    width: 700px;
+    height: 700px;
+    background: linear-gradient(135deg, #ff4d79, #ff3366);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 820px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    z-index: 3;
+}
+
+.left h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.text {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
+    width: 320px;
+}
+
+.stars {
+    margin-top: 18px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.on {
+    color: #ff527b;
+}
+
+.off {
+    color: #e0e0e0;
+}
+
+.price {
+    margin-top: 20px;
+}
+
+.old {
+    font-size: 16px;
+    color: #a0a0a0;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff527b;
+}
+
+.btn {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 140px;
+    height: 40px;
+    background-color: #00e5e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 229, 229, 0.4);
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff4d79, #ff2a5f);
+    clip-path: ellipse(78% 100% at 78% 50%);
+    z-index: 2;
+}
+
+.image {
+    position: absolute;
+    top: 15px;        
+    left: 48%;     
+    transform: translateX(-50%); 
+    width: 390px;     
+    height: auto;
+    filter: drop-shadow(-10px 15px 15px rgba(0, 0, 0, 0.3));
+    z-index: 4;
+}
+.details {
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+    text-align: right;
+    color: #ffffff;
+    z-index: 5;
+}
+
+.brand {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 2px 0;
+    letter-spacing: 0.5px;
+}
+
+.ship {
+    font-size: 10px;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.login {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+@media screen and (max-width: 860px) {
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .wrap {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px 25px;
+    }
+
+    .desc {
+        max-width: 100%;
+    }
+
+    .btn {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 25px;
+    }
+
+    .right {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        clip-path: none;
+        background: linear-gradient(135deg, #ff4d79, #ff2a5f);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+    .img {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 280px;
+        right: auto;
+    }
+
+    .details {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+    }
+}
